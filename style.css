@@ -1,0 +1,24 @@
+.chanel{
+    background: linear-gradient(280deg, #05084d 5%, #48c0e5 100%, #517edd 100%);
+    /*background: linear-gradient(180deg, #05084d 5%, #48c0e5 100%, #dee5f6 100%);*/
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+
+.footer{
+    position:absolute;
+    display: flex;
+    padding: 20px;
+    border: 0;
+    width: 100%;
+    background-color: #1757eb;
+    color: rgb(252, 248, 248);
+}
+table {
+    width: 100%; 
+  border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
