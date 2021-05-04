@@ -21,8 +21,8 @@ class UI {
       <td>${Students.degree}</td>
       <td>${Students.group}</td>
       <td>${Students.subject}</td>
-      <!--<td><a class="btn btn-danger" onclick="DeleteStudent(this)"><i class="far fa-trash-alt"></i></a></td>-->
-      <td><a class="btn btn-danger" name="delete"><i class="far fa-trash-alt"></i></a></td>
+      <td><a class="btn btn-danger" onclick="DeleteStudent(this)"><i class="far fa-trash-alt"></i></a></td>
+      
       `;
     //El método appendChild () agrega un nodo como el último hijo de un nodo
     ListStudent.appendChild(listelement);
@@ -60,13 +60,6 @@ class UI {
         document.querySelector('.alert').remove();
     },5000);
     }
-    DeleteStudent(id){
-        if(id.name=='delete'){
-        let row = id.parentNode.parentNode;
-        row.parentNode.removeChild(row);
-        this.ShowMessages('Student successfully deleted.','danger');
-        }
-    }
 }
  
 
@@ -86,16 +79,10 @@ document.getElementById('form-add')
     ui.ShowMessages('successfully added student.','success');   
     e.preventDefault();
   });
-  //funcion para eliminar una fila en la tabla
-  document.getElementById('list-students').addEventListener('click',function(e){
-    //creamos un nuevo objeto en la clase ui y despues accedemos al metodo addstudents
-    const ui= new UI();
-    //le pasamos a Students
-    ui.DeleteStudent(e.target);
-  });
-  /*function DeleteStudent(id){
+  
+  function DeleteStudent(id){
     let row = id.parentNode.parentNode;
     row.parentNode.removeChild(row);
     const ui= new UI();
     ui.ShowMessages('Student successfully deleted.','danger');
-  };*/
+  }
