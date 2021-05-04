@@ -38,7 +38,7 @@ class UI {
      const div = document.createElement('div');
      /*aqui creamos la clase alert alert-{mandamos el nombre de la clase con el 
     respectivo mensaje}*/
-     div.className=`alert alert-${ClassCss}`;
+     div.className=`alert alert-${ClassCss} mt-4`;
      //Document.createTextNode()
      //Crea un nuevo nodo de texto
      div.appendChild(document.createTextNode(message));
@@ -58,7 +58,7 @@ class UI {
     setTimeout(function(){
         //seleccionamos la clase alert y la removemos
         document.querySelector('.alert').remove();
-    },5000);
+    },2000);
     }
 }
  
